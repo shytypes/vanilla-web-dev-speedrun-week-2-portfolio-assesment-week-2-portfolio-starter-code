@@ -13,8 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <!-- local style -->
+    <!-- CSS files -->
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/form.css" />
   </head>
   <body>
     <!-- Header Area -->
@@ -22,6 +23,62 @@
     <!-- Main Area -->
     <main>
       <h1>My Amazing Portfolio</h1>
+      
+      <!-- Contact Form Section -->
+      <section class="contact-form">
+        <h2>Get In Touch</h2>
+        <form id="contactForm">
+          
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            <div id="nameError" class="error-message hidden">Please enter your name</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error-message hidden">Please enter a valid email address</div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+            <div id="messageError" class="error-message hidden">Please enter your message</div>
+          </div>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      
+      <!-- Feedback Display Section -->
+      <section id="feedbackDisplay" class="feedback-display">
+        <h2>Your Submission</h2>
+        <div class="feedback-item">
+          <div class="feedback-label">Name:</div>
+          <div id="nameDisplay"></div>
+        </div>
+        <div class="feedback-item">
+          <div class="feedback-label">Email:</div>
+          <div id="emailDisplay"></div>
+        </div>
+        <div class="feedback-item">
+          <div class="feedback-label">Subject:</div>
+          <div id="subjectDisplay"></div>
+        </div>
+        <div class="feedback-item">
+          <div class="feedback-label">Message:</div>
+          <div id="messageDisplay"></div>
+        </div>
+      </section>
     </main>
+    
+    <!-- JavaScript file -->
+    <script src="js/form.js"></script>
   </body>
 </html>
